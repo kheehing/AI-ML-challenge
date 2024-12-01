@@ -1,8 +1,27 @@
-# AI/ML challenge
- develop and deploy solution using AI
+# Flask TensorFlow Image Classification App
+This project is to develop and deploy solution using a containerized Flask application that serves a TensorFlow model for classifications of the car images(Stanford Cars Dataset)(car196). The model classifies images into different categories, and the API is exposed via a RESTful endpoint.
+
+## Project Overview
+
+This application is designed to:
+- Load a pre-trained TensorFlow model.
+- Expose a prediction API via a Flask web server.
+- Accept image files through HTTP requests and return predictions.
+
+### Features:
+- **Image Classification**: Classifies images based on a pre-trained TensorFlow model.
+- **Flask API**: RESTful API exposed via Flask to accept images and return predictions.
+- **Containerized with Docker**: The application is packaged as a Docker container for easy deployment.
+
+## Prerequisites
+
+Before running the project, ensure you have the following installed:
+
+- **Docker**: [Install Docker](https://www.docker.com/get-started) to build and run the containerized application.
+- **Python** (for local testing): [Install Python](https://www.python.org/downloads/) if you'd like to test locally before containerizing.
 
 ## Environment
-I ran this project on both my PC and my laptop so while one device is training, I can work on other parts of the project.
+I ran this project on both my PC and my laptop so while one device is training, I can work on other parts of the project on another device.
 
 ### Windows PC 
 Python version: 3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)]
@@ -21,17 +40,17 @@ Pillow: 10.2.0
 keras: 3.4.1
 sklearn: Not Installed
 
-### Macbook (M1 chip)
+## Docker
 
+I installed the docker with the following commands:
+'''
+docker build -t flask-tensorflow-app .
+'''
 
-
-Library Versions:
-
-
-
-
-
-
+I ran the docker image with the follow commands:
+'''
+docker run -p 5000:5000 flask-tensorflow-app
+'''
 
 
 ### Experimented with running Tensorflow on GPU
