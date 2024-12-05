@@ -39,7 +39,7 @@ docker build -t flask-tensorflow-app .
 ``` bash
 docker run -p 5000:5000 flask-tensorflow-app
 ```
-***For <b>macbook</b> I have to run it on 5001:5000***
+***For <b>macbook</b> run it on 5001:5000***
 ``` bash
 docker run -p 5001:5000 flask-tensorflow-app
 ```
@@ -117,8 +117,8 @@ Body: JSON object containing the predicted label and the confidence score.
 }
 ```
 ### testing the API
-1.  ***In another terminal, change directory(cd) to where the test_api.py file is located.***
-   I clone the repository in the download folder, so this is my `path`, your `path` might be different, depending on where you downlaoded it.
+1.  ***In another terminal, change directory(cd) to where the test_api.py file is located.***  
+   I clone the repository in the download folder, so my `path` and your `path` might be different, depending on where you downlaoded it.
 ``` bash
 cd C:\Users\light\OneDrive\Documents\AI-ML-challenge
 ```
