@@ -2,7 +2,7 @@ import os, re
 import requests
 
 # Define the API endpoint
-API_URL = "http://127.0.0.1:5001/predict"
+API_URL = "http://127.0.0.1:8080/predict"
 
 
 # Path to main folder
