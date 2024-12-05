@@ -26,16 +26,20 @@ Before running the project, ensure you have the following installed:
 ``` bash
 git clone https://github.com/kheehing/AI-ML-challenge
 ```
+2.  ***Change directory(cd) to where the dockerfile is located.***  
+``` bash
+cd AI-ML-challenge
+```
 2.  ***Build docker img***  
-   Change directory(cd) to where the repository is located.
+   
 ``` bash
 docker build -t flask-tensorflow-app .
 ```
-3.1  ***Run docker container***
+3  ***Run docker container***
 ``` bash
 docker run -p 5000:5000 flask-tensorflow-app
 ```
-3.2  ***For macbook I have to run it on 5001:5000***
+***For <b>macbook</b> run it on 5001:5000***
 ``` bash
 docker run -p 5001:5000 flask-tensorflow-app
 ```
@@ -51,7 +55,8 @@ Method: `POST`
 Content-Type: `multipart/form-data`
 Body: Upload an image file under the field name file.
 
-Exmaple of how I `request` (under `testing request` in `test.ipynb`)
+Exmaple of how I `request` (under `testing request` in `test.ipynb`). I ran the jupyter notebook (test.ipynb) on another terminal.  
+For <b>macbook</b> if you've copied the `docker run -p 5001:5000 flask-tensorflow-app` command from above, change the `API_URL = "http://127.0.0.1:5000/predict"` in `text_api.py` to `API_URL = "http://127.0.0.1:5001/predict"`.
 
 ``` python
 import os, re
@@ -111,6 +116,22 @@ Body: JSON object containing the predicted label and the confidence score.
   "confidence": 0.435992032289505
 }
 ```
+### testing the API
+1.  ***In another terminal, change directory(cd) to where the test_api.py file is located.***  
+   I clone the repository in the download folder, so my `path` and your `path` might be different, depending on where you downlaoded it.
+``` bash
+cd C:\Users\light\OneDrive\Documents\AI-ML-challenge
+```
+
+2. ***Run the python file***\
+   The file will feed the api with the images from `data/cars106/train` and get a response back and compile the results at the end. It will be based on the accuracy of the match. The script will print the `{predicted car model} : { actual car model}`. To run the test  file:
+``` bash
+python test_api.py
+```
+At the end it will print the following, the accuracy of the matches, the amount of matches, and the total number of test tried:
+` print(f'match/total (%): {match/total*100}')  `  
+`print(f'match: {match}')  `  
+`print(f'total: {total}')`  
 
 ## Environment
 I ran this project on both my PC and my laptop so while one device is training, I can work on other parts of the project on another device.
@@ -133,7 +154,7 @@ keras: 3.4.1
 sklearn: Not Installed  
 
 ### Experimented with running Tensorflow on GPU
-I have tried to run the project on the GPU instead but there seems to be error which I could not debug when running the code so i abandoned this approach.
+I have tried to run the project on the GPU instead but there seems to be error which I could not debug when running the code so i abandoned this approach. Below is how i setup the environment:
 
 Environment / Library Versions:  
 Python 3.10  
