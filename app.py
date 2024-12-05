@@ -1,11 +1,13 @@
 import pandas as pd
 import numpy as np
-import matplotlib, tensorflow, io
 import tensorflow as tf
-from PIL import Image
 from flask import Flask, request, jsonify
 from matplotlib import pyplot as plt
 from tensorflow.keras.models import load_model
+
+## disable cuda
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 # loading H5 model
 model = load_model('models/first.h5')

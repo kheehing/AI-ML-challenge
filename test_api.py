@@ -1,8 +1,9 @@
-import os, re
+import os, re, sys
 import requests
 
 # Define the API endpoint
-API_URL = "http://127.0.0.1:8080/predict"
+## change the Link according to the link in the docker
+API_URL = "http://127.0.0.1:5000/predict"
 
 
 # Path to main folder

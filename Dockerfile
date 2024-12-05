@@ -1,15 +1,17 @@
-FROM python:3.10
+# Use an official Python runtime as the base image
+FROM python:3.12
 
+# Set the working directory in the container to /app
 WORKDIR /app
 
-COPY . .
+# Copy the current directory (our Flask app) into the container at /app
+COPY . /app
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    libglib2.0-0 libsm6 libxrender1 libxext6 && \
-    rm -rf /var/lib/apt/lists/*
-
+# Install Flask and other dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 8080
+# Make port 5000 available for the app
+EXPOSE 5000
 
-CMD ["python", "app.py"]
+# Run the command to start the Flask app
+CMD ["flask", "run", "--host=0.0.0.0"]
