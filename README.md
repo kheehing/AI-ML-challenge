@@ -27,7 +27,7 @@ Before running the project, ensure you have the following installed:
 git clone https://github.com/kheehing/AI-ML-challenge
 ```
 2.  ***Build docker img***  
-   Change directory(cd) to where the repository is located.
+   Change directory(cd) to where the dockerfile is located.
 ``` bash
 docker build -t flask-tensorflow-app .
 ```
