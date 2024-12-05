@@ -52,14 +52,13 @@ Content-Type: `multipart/form-data`
 Body: Upload an image file under the field name file.
 
 Exmaple of how I `request` (under `testing request` in `test.ipynb`). I ran the jupyter notebook (test.ipynb) on another terminal.  
-For <b>macbook</b> if you've copied the `docker run -p 5001:5000 flask-tensorflow-app` command from above, change the `API_URL = "http://127.0.0.1:5000/predict"` in `text_api.py` to `API_URL = "http://127.0.0.1:5001/predict"`.
 
 ``` python
 import os, re
 import requests
 
 # Define the API endpoint
-API_URL = "http://127.0.0.1:5000/predict"
+API_URL = "http://127.0.0.1:8080/predict"
 
 
 # Path to main folder
