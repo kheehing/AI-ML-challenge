@@ -37,7 +37,7 @@ docker build -t flask-tensorflow-app .
 ```
 3  ***Run docker container***
 ``` bash
-docker run -p 8080:8080 flask-tensorflow-app
+docker run -p 5000:5000 flask-tensorflow-app
 ```
 
 
@@ -58,7 +58,7 @@ import os, re
 import requests
 
 # Define the API endpoint
-API_URL = "http://127.0.0.1:8080/predict"
+API_URL = "http://127.0.0.1:5000/predict"
 
 
 # Path to main folder
