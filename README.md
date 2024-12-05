@@ -154,7 +154,7 @@ keras: 3.4.1
 sklearn: Not Installed  
 
 ### Experimented with running Tensorflow on GPU
-I have tried to run the project on the GPU instead but there seems to be error which I could not debug when running the code so i abandoned this approach.
+I have tried to run the project on the GPU instead but there seems to be error which I could not debug when running the code so i abandoned this approach. Below is how i setup the environment:
 
 Environment / Library Versions:  
 Python 3.10  
