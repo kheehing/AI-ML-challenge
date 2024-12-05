@@ -31,10 +31,15 @@ git clone https://github.com/kheehing/AI-ML-challenge
 ``` bash
 docker build -t flask-tensorflow-app .
 ```
-3.  ***Run docker container***
+3.1  ***Run docker container***
 ``` bash
 docker run -p 5000:5000 flask-tensorflow-app
 ```
+3.2  ***For macbook I have to run it on 5001:5000***
+``` bash
+docker run -p 5001:5000 flask-tensorflow-app
+```
+
 
 ## API Endpoints
 `POST /predict`
